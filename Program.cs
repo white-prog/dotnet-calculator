@@ -8,24 +8,41 @@ namespace Calculator
 {
     class Program {
         static void Main(string[] args){
+            Console.WriteLine("-------------------------------");
             Console.WriteLine("Calculator");
-            Console.Write("Enter the first number: ");
-            double num1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter the operator[+,-,x,/]: ");
-            string op = Console.ReadLine();
-            Console.Write("Enter the second number: ");
-            double num2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("-------------------------------");
+            for (int i = 0; i < 3; i++){
+                Console.WriteLine("");
+            }
+            while (true){
+                Console.Write("Do you want to calculate?[Y/N]: ");
+                char response = Convert.ToChar(Console.ReadLine());
+                if (response == 'N'){
+                    Console.WriteLine("Thank you for using the calculator");
+                    break;
+                }
             
-            if (op == "+"){
-                Console.WriteLine(Add(num1, num2));
-            } else if (op == "-"){
-                Console.WriteLine(Subtract(num1, num2));
-            } else if (op == "x"){
-                Console.WriteLine(Multiply(num1, num2));
-            } else if (op == "/"){
-                Console.WriteLine(Divide(num1, num2));
-            } else {
-                Console.WriteLine("Invalid operator");
+                
+                Console.Write("Enter the first number: ");
+                double num1 = Convert.ToDouble(Console.ReadLine());
+            
+            
+                Console.Write("Enter the operator[+,-,x,/]: ");
+                string op = Convert.ToString(Console.ReadLine());
+                Console.Write("Enter the second number: ");
+                double num2 = Convert.ToDouble(Console.ReadLine());
+            
+                if (op == "+"){
+                    Console.WriteLine(Add(num1, num2));
+                } else if (op == "-"){
+                    Console.WriteLine(Subtract(num1, num2));
+                } else if (op == "x"){
+                    Console.WriteLine(Multiply(num1, num2));
+                } else if (op == "/"){
+                    Console.WriteLine(Divide(num1, num2));
+                } else {
+                    Console.WriteLine("Invalid operator");
+                }
             }
         }
 
