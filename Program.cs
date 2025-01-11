@@ -28,7 +28,7 @@ namespace Calculator
             
             
                 Console.Write("Enter the operator[+,-,x,/]: ");
-                string op = Convert.ToString(Console.ReadLine());
+                string op = Console.ReadLine();
                 Console.Write("Enter the second number: ");
                 double num2 = Convert.ToDouble(Console.ReadLine());
             
